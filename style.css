@@ -1,0 +1,217 @@
+:root {
+    --primary-color: #5a4f46;
+    --secondary-color:#97D4D9;
+    --ternary-color: #A0916F;
+    --header-color: #fff;
+    --cardBg-color: #fff;
+    --bodyBg-color: #F0EFE9;
+    --title-color: #5A4F46;
+}
+
+  body {
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    background: var(--bodyBg-color);
+    padding: 0;
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-family: 'Abril Fatface', cursive;
+  }
+
+  /* ========== HEADER ============= */
+
+  .recipe__header {
+    background: url('assets/chocolate.jpg');
+    background-size: cover;
+    color: var(--header-color);
+    padding: 2em 1em 0em;
+    text-align: center;
+    margin-bottom: 2em;
+    position: relative;
+  }
+
+  .recipe__header::before {
+      content: "";
+      display: block;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      height: 100%;
+      background-image: linear-gradient(to top, rgba(90, 79, 70, 100%),rgb(90, 79, 70, 35%));
+  }
+
+  .recipe__header .recipe__title::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 150px;
+    background: var(--secondary-color);
+    margin: 1em auto;
+  }
+
+  .recipe__header__menuBtn {
+    display: block;
+    margin: 0 auto;
+    background: var(--header-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 1em;
+  }
+
+  .recipe__title,
+  .recipe__subtitle {
+    margin-top: 0;
+    margin-bottom: 0.4em;
+  }
+
+  .recipe__title {
+    position: relative;
+    padding: 0 20px;
+    display: inline-block;
+  }
+
+  .recipe__subtitle {
+    font-family: "Open Sans", sans-serif;
+    margin-top: 0;
+  }
+
+  /* =========== NAVIGATION ========== */
+  .recipe__navigation__menu {
+    width: 200px;
+    position: fixed;
+  }
+
+  .recipe__navigation__menu,
+  .recipe__navigation__submenu {
+    list-style: none;
+    margin: 0.5em;
+    padding: 0;
+  }
+
+  .recipe__navigation__item a,
+  .recipe__navigation__item button {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 0.3em;
+    background: var(--ternary-color);
+    color: var(--header-color);
+    text-decoration: none;
+    padding: 0.3em 0.5em 0.3em 2em;
+    display: block;
+    border: none;
+    width: 100%;
+    position: relative;
+  }
+
+  .recipe__navigation__item a:hover,
+  .recipe__navigation__item button:hover {
+    color: var(--primary-color);
+    background: var(--header-color);
+  }
+
+  /* ========== CARD ============ */
+
+  .recipe__card {
+    background: var(--cardBg-color);
+    margin: 1em auto 2em;
+    width: 700px;
+    max-width: 100%;
+  }
+
+  .recipe__card__header {
+    background: url('assets/bg.png');
+    color: var(--header-color);
+    border-bottom: 10px solid var(--ternary-color);
+    padding: 0.3em;
+    text-align: center;
+  }
+
+  .recipe__card__title {
+    margin: 0;
+  }
+
+  .recipe__card__content {
+    padding: 1em;
+  }
+
+  .recipe__card__content h2,
+  .recipe__card__content h3 {
+    text-align: center;
+    color: var(--title-color);
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .recipe__card__step img,
+  .recipe__thumb {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .recipe__card__step {
+    text-align: center;
+  }
+
+  .recipe__card__carousel {
+    padding-bottom: 1em;
+    border-bottom: 5px dotted var(--secondary-color);
+    margin-bottom: 2.5em;
+  }
+
+  .recipe__share {
+    text-align: center;
+  }
+
+  /* ========== STEPS ========== */
+
+  .recipe__steps__final {
+    width: 700px;
+    height: 100%;
+    max-width: 100%;
+    color: var(--header-color);
+    background: var(--primary-color);
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .recipe__step {
+    background: url('assets/bg.png');
+    padding: 1em;
+    margin: 1em 0s;
+  }
+
+  .recipe__steps__final span {
+    vertical-align: middle;
+  }
+
+  /* ========== SHARE ========== */
+
+  amp-social-share[type='twitter'],
+  amp-social-share[type='facebook'],
+  amp-social-share[type='email'],
+  amp-social-share[type='whatsapp'],
+  amp-social-share[type='linkedin'] {
+    background-color: var(--primary-color);
+  }
+
+  /* ========== FOOTER ============ */
+
+  .recipe__footer {
+    color: var(--header-color);
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    padding: 0.7em;
+    font-size: 12px;
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  }
